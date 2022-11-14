@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+form {
+    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(10px, auto);
+    grid-template-areas: 
+        "top-left    .      top-right"
+        "result      result result"
+        "bottom-left .      bottom-right"
+        "submit      submit submit";
+    gap: 20px;
+}
+
+.resultBox {
+    grid-area: result;
+    width: 100%;
+}
+
+.submitInput {
+    max-width: 100%;
+    grid-area: submit;
+}
+
+input {
+    max-width: 100px;
+    text-align: center;
+}
+
+.topLeft { grid-area: top-left; }
+.topRight { grid-area: top-right; }
+.bottomLeft { grid-area: bottom-left; }
+.bottomRight { grid-area: bottom-right; }
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    background-color: aquamarine;
+    border-radius: 0;
+}
